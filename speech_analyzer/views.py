@@ -7,3 +7,5 @@ def index(request):
     template = loader.get_template('speech/index.html')
     context = {}
     return HttpResponse(template.render(context, request))
+
+# TODO: index POST Request, receive youtube link

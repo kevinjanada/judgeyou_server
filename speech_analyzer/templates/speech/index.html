@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    Hello
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1 class="display-4">JudgeYou</h1>
+            <h2 class="display-5">Speech Analyzer</h2>
+            <p class="lead">Input youtube link of your speech and we will analyze it for you!</p>
+        </div>
+        <form action="analyze/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="input-youtube-url">Youtube URL</label>
+                <input name="input-youtube-url" type="text" class="form-control" id="input-youtube-url" placeholder="Enter youtube link">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
