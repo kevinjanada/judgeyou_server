@@ -1,5 +1,5 @@
 from django.urls import path
-from speech_analyzer import analyzer
+from . import analyzer
 from . import views
 
 urlpatterns = [
