@@ -20,8 +20,22 @@
                 <label for="input-youtube-url">Youtube URL</label>
                 <input name="input-youtube-url" type="text" class="form-control" id="input-youtube-url" placeholder="Enter youtube link">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button onclick="analyze()" class="btn btn-primary">Analyze</button>
+            <button type="submit" class="btn btn-primary">Analyze using Google Text to Speech API</button>
         </form>
     </div>
 </body>
+<script>
+function analyze() {
+    const form = document.getElementsByTagName('form');
+    form.action = 'analyze/';
+    form.submit();
+
+}
+function analyzeGoogle() {
+    const form = document.getElementsByTagName('form');
+    form.action = 'analyze-google/';
+    form.submit();
+}
+</script>
 </html>
