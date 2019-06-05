@@ -38,6 +38,6 @@ def analyze(request):
     context = { 'result': RESULT }
     return HttpResponse(template.render(context, request))
 
-
+# FIXME: need to get google api key
 def analyze_google(request):
     VIDEO_URL = request.POST['input-youtube-url']

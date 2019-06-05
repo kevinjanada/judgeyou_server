@@ -8,8 +8,11 @@
 </head>
 <body>
     Your results:
-    <p>
-        {{ result }}
-    </p>
+    {% load pretty_json %}
+    <pre>
+        {{ result | pretty_json }}
+    </pre>
 </body>
+<script>
+</script>
 </html>
